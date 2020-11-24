@@ -90,5 +90,17 @@ class Employee extends Person{
 }
 const myEmployee = new Employee(`Trump`, 76 , `New Yorks`, `Male`,`1m$`)
 // console.log(myEmployee)
-console.log(myEmployee.speak())
-console.log(myEmployee.salary())
+// console.log(myEmployee.speak())
+// console.log(myEmployee.salary())
+
+// bt ke thua
+class dog extends Animal{
+    constructor(species,name,color,numberOfLeg,gender){
+        super(species,name,color,numberOfLeg,gender)
+    }
+    speak() {
+        console.log(`go go go`)
+    }
+}
+const Hello = new dog('an thit', ' hello', 'yellow',4,'male')
+Hello.speak()
