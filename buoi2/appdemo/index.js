@@ -53,7 +53,7 @@ class UserColection{
             this.show()
         }
         
-    }
+    }   
     next() {
         if(this.current < this.listUser.length -1){
             this.current++

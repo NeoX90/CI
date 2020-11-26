@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>QLHS</title>
 </head>
 <body>
-    
-</body>
+    <div class="add">
+        <table>
+            <tr>
+                <th>Class</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Home Town</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="className"></td>
+                <td><input type="text" id="NameStudent"></td>
+                <td><input type="number" id="StudentAge"></td>
+                <td><input type="text" id="StudentHT"></td>
+            </tr>
+        </table>
+        <button id="add" onclick="add()">Add</button>
+    </div>
+    <div id="search">
+        <input type="text" id="search">
+        <button id="btnSearch" onclick="searchNameStudent()">search</button>
+    </div>
+    <div id="app">
+        
+    </div>
+</body> 
 <script src="./index.js"></script>
 </html>
