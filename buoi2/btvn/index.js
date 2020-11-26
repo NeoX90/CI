@@ -1,3 +1,5 @@
+
+
 let className = document.querySelector(`#className`)
 let NameStudent = document.querySelector(`#NameStudent`)
 let StudentAge = document.querySelector(`#StudentAge`)
@@ -36,31 +38,8 @@ class Student {
     }
 } 
 
-class StudentColection{
-    listStudent;
-    current;
-    constructor() {
-        this.listStudent =[];
-        this.current = 0;
-    }
-    addStudent(student){
-        this.listStudent.push(student)
-        
-    }
-
-    show() {
-        document.querySelector(`#app`).innerHTML =  this.listStudent.map((student) => student.toHtml())        
-    }
-    searchName(name) {
-        return  this.listStudent.filter(student => student.name.includes(name)) //includes check ab co nam trong name :abcd ko va tra ve gia tri true
-    }
-    searchAge(age) {
-        return  this.listStudent.filter(student => student.age === age) 
-    }
-    searchSth(age,homeTown){
-        return this.listStudent.filter(student => student.age === age) && this.listStudent.filter(student => student.age === age)
-    }
-}
+import{StudentColection} from './module.js'
+//hoac su dung import * as --name-- from ...
 // them data
 const studentColection = new StudentColection()
 const student1 = new Student(`th1`,`nam`,20,`ha noi`) 
