@@ -13,6 +13,6 @@ class StudentColection{
     show() {
         document.querySelector(`#container`).innerHTML = this.listStudent.map((student) =>student.toHtml())
     }  
-    //
+    // sth new in here
 }
 export{StudentColection}
