@@ -8,7 +8,7 @@ class StudentColection{
     }
     addStudent(student){
         this.listStudent.push(student)
-        // console.log(this.listStudent)
+        console.log(this.listStudent)
     }
     show() {
         document.querySelector(`#container`).innerHTML = this.listStudent.map((student) =>student.toHtml())

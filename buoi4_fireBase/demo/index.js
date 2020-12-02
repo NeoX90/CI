@@ -1,7 +1,7 @@
 //read one
 // getOneDocument();
 
-import { getDataFromDoc , getDataFromDocs } from '../utils.js';
+import { getDataFromDoc , getDataFromDocs } from '../../utils.js';
 getManyDocument();
 async function getOneDocument() {
     
