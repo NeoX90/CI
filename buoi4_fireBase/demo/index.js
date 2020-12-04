@@ -25,3 +25,4 @@ async function getManyDocument(){
     const user = getDataFromDocs(res)
     console.log(user)
 }
+
