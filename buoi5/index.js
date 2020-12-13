@@ -29,6 +29,8 @@ async function checkAuthen() {
     }
 }
 
+
+
 export function redirect(screenName) { 
     if(screenName === 'register') {
         document.getElementById('app').innerHTML =`

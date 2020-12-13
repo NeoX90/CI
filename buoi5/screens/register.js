@@ -1,4 +1,5 @@
 import '../../utils.js'
+
 const style =`
     <style>
         .register-container{
@@ -107,7 +108,7 @@ class RegisterScreen extends HTMLElement{
                 addDocument()
                 alert('dang ki thanh cong')
                 redirect('login')
-            }
+            } 
         })
         this._shadowRoot.getElementById('redirect').addEventListener('click', () => {
             redirect('login')

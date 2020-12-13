@@ -1,3 +1,4 @@
+
 const style =`
 *{
     margin: 0;
@@ -34,12 +35,15 @@ const style =`
 }
 
 `
+import {redirect} from '../index.js'
 class StoryHeader extends HTMLElement {
     constructor() {
         super()
         this._shadowDom = this.attachShadow({mode: 'open'})
     }
+
     connectedCallback() {
+        
         this._shadowDom.innerHTML = `
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
@@ -52,14 +56,17 @@ class StoryHeader extends HTMLElement {
             </div>
             <div class="user-infor">
                 <div class="avatar"><i class="fa fa-user-circle-o" style="color: #fff;font-size:24px"></i></div>
-                <button class="btn"><i class="fa fa-sign-out" style="font-size:24px;"></i></button>
+                <button class="btnLogOut" id='btnLogOut'><i class="fa fa-sign-out" style="font-size:24px;"></i></button>
             </div>
         </div>
         `
-        // let btnLogOut = document.querySelector('.btn')
-        // btnLogOut.addEventListener('click', () => {
-        //     alert('hello')
-        // })
+        this._shadowDom.querySelector('.btnLogOut')
+        .addEventListener('click', () =>{
+            localStorage.removeItem('currentUser')
+            redirect('login')
+        })
+
     }
+
 }
 window.customElements.define('story-header',StoryHeader)
