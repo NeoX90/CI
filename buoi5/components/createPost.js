@@ -11,13 +11,14 @@ class CreatePost extends HTMLElement {
             </form>
         `
         let btnPost = this._shadowDom.querySelector('.btnPost')
-        let dataPost = this._shadowDom.querySelector('.text-area').value
+        
         // this._shadowDom.querySelector('btnPost')
         // .addEventListener('click', () =>{
         //     firebase.firestore().collection('users').add(dataPost)
         // } )
         btnPost.addEventListener('click' , async (e)=>{
             e.preventDefault()
+            let dataPost = this._shadowDom.querySelector('.text-area').value
             const post = {
                 createBy: JSON.parse(localStorage.getItem('currentUser')).id,
                 createAt: new Date(),
@@ -25,7 +26,9 @@ class CreatePost extends HTMLElement {
                 createName: JSON.parse(localStorage.getItem('currentUser')).name,
                 isShow: true
             }
+            // console.log(post.content)
             firebase.firestore().collection('posts').add(post)
+            alert('port bai thanh cong')
         })
     }
 }
