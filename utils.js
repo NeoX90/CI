@@ -45,3 +45,11 @@ function deleteDocument() {
     firebase.firestore().collection('users').doc(docId).delete()
 }
 deleteDocument()
+
+//save to local storage
+export function saveToLocalStorage(key , value){
+    localStorage.setItem(key,JSON.stringify(value))
+}
+export function getItemsLocalStorage(key){
+    return JSON.parse(localStorage.getItem(key))
+}
