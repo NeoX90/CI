@@ -53,3 +53,16 @@ export function saveToLocalStorage(key , value){
 export function getItemsLocalStorage(key){
     return JSON.parse(localStorage.getItem(key))
 }
+export function convertDate(dateStr) {
+    console.log(dateStr)
+    const date = new Date(dateStr)
+    const day = date.getDate()
+    const month = date.getMonth() + 1
+    const year = date.getFullYear() 
+    const hour = date.getHours()
+    const minutes = date.getMinutes()
+    return `${day}/${month}/${year} ${hour}:${minutes}`
+}
+function validateNiceNumber(number) {
+    return (number < 10) ? ('0' + number) : (number)
+}

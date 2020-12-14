@@ -5,6 +5,8 @@ import './screens/story.js'
 import './components/header.js'
 import './components/createPost.js'
 import './components/inputWrapper.js'
+import './components/postItem.js'
+import './components/listPost.js'
 import {getItemsLocalStorage} from '../utils.js'
 
 checkAuthen()
